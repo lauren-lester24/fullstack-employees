@@ -2,13 +2,13 @@ import express from "express";
 const app = express();
 
 
-
+app.use(express.json());
 
 import employeesRouter from "./api/employees.js"; 
 
 
 // Middleware to parse JSON bodies
-app.use(express.json());
+
 
 // Attach your employees router
 app.use("/employees", employeesRouter);
